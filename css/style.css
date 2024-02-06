@@ -1,5 +1,48 @@
+@import url(reset.css);
+/* Eric Meyer's css reset. */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain) */
+
+@import url('https://fonts.googleapis.com/css2?family=Handlee&family=Montserrat:wght@400;700&display=swap');
+
+/*
+    font-family: 'Handlee', cursive;
+
+    font-family: 'Montserrat', sans-serif;
+    */
+
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css');
+
+/* fuente tipográfica para los iconos */
+
 * {
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
+}
+
+:root {
+    --fuenteprincipal: 'Montserrat', sans-serif;
+    --fuentetitulos: 'Handlee', cursive;
+    --colorprincipal: #fa573a;
+    --colorsecundario: #21242e;
+    --fontsize: 1rem;
+    --anchomaximo: 68.75rem;
+    --magingrid: 1rem;
+
+}
+
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.container {
+    max-width: var(--anchomaximo);
+    margin: 0 auto;
+}
+
+body {
+    font-family: var(--fuenteprincipal);
+    font-size: var(--fontsize);
 }
