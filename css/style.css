@@ -16,6 +16,7 @@
 
 /* fuente tipográfica para los iconos */
 
+
 * {
     box-sizing: border-box;
 }
@@ -69,6 +70,64 @@ header .nav-top .container {
     }
 }
 
+header nav .container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+header nav figure a {
+    display: block;
+    max-width: 6.25rem;
+}
+
+header figure {
+    width: calc(100% - 1.875rem);
+    padding: 1.25rem 0;
+}
+
+header .hamburguesa {
+    width: 1.875rem;
+    padding: 1.25rem 0;
+    cursor: pointer;
+}
+
+header .menu {
+    width: 100%;
+}
+
+header figure img {
+    max-width: 6.25rem;
+}
+
+header .hamburguesa div {
+    border-top: 2px solid #aaa;
+    margin-bottom: 0.625rem;
+}
+
+header .menu a {
+    display: block;
+    width: 100%;
+    text-decoration: none;
+    padding: 1.25rem;
+    text-align: center;
+    border-bottom: 1px solid #aaa;
+    color: #aaa;
+}
+
+header .menu li:last-child a {
+    border-bottom: 0;
+}
+
+header .menu .activo {
+    color: var(--colorprincipal);
+}
+
+/* FINAL HEADER */
+
+
+
+/* INICIO MEDIA-QUERIES */
+
 @media(min-width: 48rem) {
     header .nav-top .container {
         justify-content: space-between;
@@ -85,6 +144,28 @@ header .nav-top .container {
         }
 
     }
+}
 
+@media(min-width: 62.75rem) {
+    header .hamburguesa {
+        display: none;
+    }
 
-    /* FINAL HEADER */
+    header nav .container {
+        flex-wrap: nowrap;
+    }
+
+    header .menu {
+        padding: 0.5rem o;
+        display: flex;
+        justify-content: end;
+    }
+
+    header .menu a {
+        border: 0;
+        padding: 1.25rem 0rem 1.25rem 2.50rem;
+
+    }
+}
+
+/* FINAL MEDIA-QUERIES */
