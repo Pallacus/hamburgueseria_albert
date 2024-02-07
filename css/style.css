@@ -242,7 +242,7 @@ main section h2 {
     font-size: 2rem;
     text-align: center;
 
-    &span {
+    & span {
         color: var(--colorprincipal);
     }
 }
@@ -270,7 +270,7 @@ main .grid article {
     Luego se eliminará. 
     height: 20vh;
     background-color: black;*/
-    padding: v1.25rem;
+    padding: 1.25rem;
     border-bottom: 1px solid #aaa;
 
     & i {
@@ -306,6 +306,54 @@ main .grid article {
 }
 
 /* FINAL OUR SERVICES */
+
+/* INICIO ABOUT US */
+#aboutus {
+    margin-bottom: 12.5rem;
+}
+
+section#aboutus .flex {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: var(--magingrid);
+
+    & h3 {
+        font-weight: 700;
+        font-size: 120%;
+    }
+
+    & h4 {
+        color: var(--colorprincipal);
+        font-size: 110%;
+        margin: var(--margingrid);
+    }
+
+    & p {
+        color: #666;
+        line-height: 1.20;
+    }
+
+}
+
+section#aboutus .imagen {
+    border: 3px solid var(--colorprincipal);
+    transform: rotateZ(10deg);
+    width: 95%;
+}
+
+section#aboutus .imagen .marco {
+    transform: rotateZ(-10deg);
+    width: 95%;
+}
+
+section#aboutus figure:hover :is(.imagen, .marco) {
+    transform: rotateZ(0deg);
+}
+
+
+
+/* FINAL ABOUT US */
 
 /* INICIO MEDIA-QUERIES */
 
