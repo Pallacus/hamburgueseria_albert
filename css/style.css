@@ -21,6 +21,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 :root {
     --fuenteprincipal: 'Montserrat', sans-serif;
     --fuentetitulos: 'Handlee', cursive;
@@ -95,9 +99,9 @@ header .menu {
     width: 100%;
 }
 
-header figure img {
+/* header figure img {
     max-width: 6.25rem;
-}
+}*/
 
 header .hamburguesa div {
     border-top: 2px solid #aaa;
@@ -130,7 +134,7 @@ footer {
     background-color: var(--colorsecundario);
     text-align: center;
     color: white;
-    padding: 1.25rem 0;
+    padding: 1.25rem 0rem;
     position: fixed;
     bottom: 0;
     width: 100%;
@@ -189,7 +193,7 @@ footer a {
     }
 
     header .menu {
-        padding: 0.5rem o;
+        padding: 0.5rem 0;
         display: flex;
         justify-content: end;
     }
