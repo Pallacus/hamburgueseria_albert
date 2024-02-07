@@ -159,6 +159,72 @@ footer a {
 
 /* FINAL FOOTER */
 
+/* INICIO HERO */
+
+.hero {
+    background-image: url('../images/fondo.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-color: #777;
+    background-blend-mode: multiply;
+}
+
+.hero .container {
+    padding: 130px 0px;
+
+    & h1 {
+        font-family: var(--fuentetitulos);
+        font-size: 2.25rem;
+        color: white;
+    }
+
+    & h2 {
+        font-size: 1.25rem;
+        color: var(--colorprincipal);
+        margin: var(--magingrid) 0;
+    }
+
+    & p {
+        color: white;
+    }
+}
+
+.boton {
+    display: inline-block;
+    background-color: var(--colorprincipal);
+    padding: 1.15rem;
+    margin: var(--magingrid) 0;
+    color: white;
+    text-decoration: none;
+    border: 1px solid var(--colorprincipal);
+
+    &:hover {
+        background-color: transparent;
+        color: var(--colorprincipal);
+
+        & i {
+            transform: translateX(5px);
+            transition: transform 0.5s;
+        }
+
+    }
+}
+
+.hero .social {
+    display: flex;
+    justify-content: space-between;
+    width: 10rem;
+
+    & a {
+        font-size: 2em;
+        color: white;
+        text-decoration: none;
+    }
+}
+
+
+/* FINAL HERO */
+
 /* INICIO MEDIA-QUERIES */
 
 @media(min-width: 48rem) {
