@@ -33,7 +33,6 @@ html {
     --fontsize: 1rem;
     --anchomaximo: 68.75rem;
     --magingrid: 1rem;
-
 }
 
 img {
@@ -98,10 +97,6 @@ header .hamburguesa {
 header .menu {
     width: 100%;
 }
-
-/* header figure img {
-    max-width: 6.25rem;
-}*/
 
 header .hamburguesa div {
     border-top: 2px solid #aaa;
@@ -170,7 +165,7 @@ footer a {
 }
 
 .hero .container {
-    padding: 130px 0px;
+    padding: 130px 10px;
 
     & h1 {
         font-family: var(--fuentetitulos);
@@ -308,15 +303,16 @@ main .grid article {
 /* FINAL OUR SERVICES */
 
 /* INICIO ABOUT US */
+
 #aboutus {
     margin-bottom: 12.5rem;
 }
 
 section#aboutus .flex {
-    margin-top: 30px;
+    margin-top: 1.875rem;
     display: flex;
     flex-direction: column;
-    gap: var(--magingrid);
+    gap: var(--margingrid);
 
     & h3 {
         font-weight: 700;
@@ -326,7 +322,7 @@ section#aboutus .flex {
     & h4 {
         color: var(--colorprincipal);
         font-size: 110%;
-        margin: var(--margingrid);
+        margin: var(--margingrid) 0;
     }
 
     & p {
@@ -340,11 +336,14 @@ section#aboutus .imagen {
     border: 3px solid var(--colorprincipal);
     transform: rotateZ(10deg);
     width: 95%;
-}
+    transition: 0.5s;
+    /* margin: 0 auto; */
 
-section#aboutus .imagen .marco {
-    transform: rotateZ(-10deg);
-    width: 95%;
+    & .marco {
+        transform: rotateZ(-10deg);
+        transition: 0.5s;
+
+    }
 }
 
 section#aboutus figure:hover :is(.imagen, .marco) {
@@ -367,9 +366,14 @@ section#aboutus figure:hover :is(.imagen, .marco) {
     }
 
     main .grid article {
-        padding: v1.25rem;
+        padding: 1.25rem;
         border-bottom: 0;
         border-left: 1px solid #aaa;
+    }
+
+    section#aboutus .flex {
+        flex-direction: row;
+
     }
 }
 
