@@ -65,7 +65,7 @@ h2 {
 .underline {
     position: relative;
     width: 100px;
-    margin: 0 auto;
+    margin: 0 auto 2rem auto;
     color: var(--colorprincipal);
     font-weight: bold;
     text-align: center;
@@ -89,16 +89,22 @@ h4 {
     line-height: 2;
     font-weight: 700;
     font-size: 110%;
-    margin: var(--margingrid) 0;
+    margin: 0;
+
 }
 
 p {
     color: #666;
     font-size: 95%;
     line-height: 1.2;
-    margin: var(--margingrid) 0;
+    margin: 1.5rem 0;
 }
 
+.enlace {
+    color: var(--colorprincipal);
+    text-decoration: none;
+    font-weight: 700;
+}
 
 /* INICIO HEADER */
 
@@ -121,14 +127,14 @@ header .nav-top .container {
     }
 }
 
-header nav .container {
+header nav>.container {
     display: flex;
     flex-wrap: wrap;
-}
 
-header nav figure a {
-    display: block;
-    max-width: 6.25rem;
+    & figure a {
+        display: block;
+        max-width: 6.25rem;
+    }
 }
 
 header figure {
@@ -181,6 +187,10 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
+
+    & p {
+        margin: 1rem 0;
+    }
 }
 
 footer a {
@@ -214,6 +224,7 @@ footer a {
 
 .hero .container {
     padding: 130px 10px;
+    display: block;
 
     & h1 {
         font-family: var(--fuentetitulos);
@@ -224,7 +235,7 @@ footer a {
     & h2 {
         font-size: 1.25rem;
         color: var(--colorprincipal);
-        margin: var(--margingrid) 0;
+        display: inline-;
     }
 
     & p {
@@ -249,7 +260,6 @@ footer a {
             transform: translateX(5px);
             transition: transform 0.5s;
         }
-
     }
 }
 
@@ -290,19 +300,12 @@ section#services .grid article {
 
     & i {
         color: var(--colorprincipal);
-
     }
 
     & div i {
         border: 1px solid var(--colorprincipal);
         padding: 0.8rem;
         font-size: 150%;
-    }
-
-    & a {
-        color: var(--colorprincipal);
-        text-decoration: none;
-        font-weight: 700;
     }
 
 }
@@ -312,7 +315,7 @@ section#services .grid article {
 /* INICIO ABOUT US */
 
 #aboutus {
-    margin-bottom: 12.5rem;
+    margin-bottom: 8rem;
 }
 
 section#aboutus .flex {
@@ -331,7 +334,7 @@ section#aboutus .flex {
 section#aboutus .imagen {
     border: 3px solid var(--colorprincipal);
     transform: rotateZ(10deg);
-    width: 95%;
+    width: 80%;
     transition: 0.5s;
     /* margin: 0 auto; */
 
@@ -352,6 +355,9 @@ section#aboutus figure:hover :is(.imagen, .marco) {
 
 
 /* INICIO OUR BLOGS */
+#blog {
+    margin-bottom: 4rem;
+}
 
 section#blog hr {
     top: -1px;
@@ -404,6 +410,104 @@ section#blog i {
 }
 
 /* FINAL OUR BLOGS */
+
+
+/* INICIO MENU */
+
+#menu {
+    background-color: var(--colorsecundario);
+    margin-bottom: 3rem;
+}
+
+#menu .container {
+    padding: 0.25rem;
+
+    & h2 {
+        color: white;
+        padding-top: 2rem;
+    }
+
+    & .underline {
+        position: relative;
+
+        &>hr {
+
+            top: -1px;
+        }
+    }
+
+    & nav>.container {
+        padding: 0;
+        margin-bottom: 2rem;
+    }
+
+    &>hr {
+        position: absolute;
+        width: 4rem;
+        color: var(--colorprincipal);
+        /* top: -2px; */
+    }
+
+    & h4 {
+        color: white;
+    }
+
+    & p {
+        color: #aaa;
+    }
+}
+
+#menu .menu {
+    font-family: var(--fuenteprincipal);
+
+    & a {
+        display: block;
+        text-decoration: none;
+        padding: 0.75rem;
+        font-size: 0.85rem;
+        color: white;
+    }
+
+    & .activo {
+        background-color: var(--colorprincipal);
+        border-radius: 5px;
+        font-weight: 400;
+    }
+
+}
+
+#menu article {
+    padding-bottom: var(--margingrid);
+}
+
+#menu .product {
+    display: flex;
+
+    & h4 {
+        color: white;
+    }
+
+    & .price {
+        color: var(--colorprincipal);
+        padding: 0 var(--margingrid);
+    }
+
+}
+
+#menu .today {
+    padding: var(--margingrid);
+
+    & h5 {
+        color: #aaa;
+    }
+
+    & .nodo {
+        padding: var(--margingrid) 0;
+    }
+}
+
+
+/* FINAL MENU */
 
 
 /* INICIO MEDIA-QUERIES */
@@ -484,6 +588,44 @@ section#blog i {
     section#blog .grid {
         grid-template-columns: repeat(3, 1fr);
     }
+
+    #menu .flex {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+
+        & .lateral {
+            display: inline;
+            width: 30%;
+        }
+
+        & .today {
+            display: inline;
+            width: 60%;
+            padding: 0;
+        }
+
+        & article {
+            display: flex;
+
+            & img {
+                max-width: 175px;
+                padding: 0 var(--margingrid);
+            }
+        }
+
+        & .product {
+            align-content: unset;
+        }
+
+        & .head>hr {
+            position: absolute;
+            width: 4rem;
+            color: var(--colorprincipal);
+        }
+    }
 }
+
+
 
 /* FINAL MEDIA-QUERIES */
